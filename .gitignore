@@ -1,4 +1,1 @@
-demo/demo/__pycache__/__init__.cpython-310.pyc
-demo/demo/__pycache__/settings.cpython-310.pyc
-demo/demo/__pycache__/urls.cpython-310.pyc
-demo/demo/__pycache__/wsgi.cpython-310.pyc
+__pycache__*
