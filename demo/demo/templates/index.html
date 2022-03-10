@@ -3,14 +3,18 @@
         <LINK href="static/css/gallery.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div class="container" onclick="addImage()">
-            <div class="header vertical-center">PHOTO GALLERY (v1.0)</div>
+        <div class="container">
+            <div class="header vertical-center">IMAGE GALLERY (v2.0)</div>
             <div class="center vertical-center">
-                <button class="button-4" role="button">Add a Picture</button>
+                <button class="button-4" role="button" onclick="clearGallery()">Clear</button>
+                <button class="button-4" role="button" onclick="addImage()">Let Javascript add an Image</button>
+                <button class="button-4" role="button" onclick="generateImages(getNumber())">Let Server add Images</button>
+                <input id="number" class="input" type="number" min="1" value="10" autofocus>
             </div>
         </div>
 
         <script type="text/javascript" src="static/js/gallery.js"></script>
+        <script type="text/javascript" src="static/js/websockets.js"></script>
 
     </body>
 </html>

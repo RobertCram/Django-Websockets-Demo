@@ -9,12 +9,31 @@ EXAMPLE GALLERY ITEM
 
 */ 
 
+var imagesAdded = 0
 
-function addImage(){
-    imgTag = createImgTag(picsumUrl(), 'alt text')
-    descTag = createDescTag('description')
+function getNumber(){
+    return parseInt(document.getElementById("number").value);
+}
+
+function clearGallery(){
+    var class_name = 'gallery';
+    elements = document.getElementsByClassName(class_name);
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }    
+}
+
+function addImage(src, desc){
+    if (!src) {
+        src = picsumUrl();
+        desc = `Javascript Image #${imagesAdded + 1}`
+        imagesAdded++
+    }
+    imgTag = createImgTag(src, "alt text")
+    descTag = createDescTag(desc)
     div = createGalleryDivTag(imgTag, descTag);
-    document.body.appendChild(div)
+    document.body.appendChild(div);
+    document.getElementById("number").focus();
 }
 
 function createGalleryDivTag(imgTag, descTag){

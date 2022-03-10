@@ -89,6 +89,11 @@ div.desc {
     padding-left: 50px;
 }
 
+.input {
+    height: 28px;    
+    width: 40px;    
+}
+
 .vertical-center {
     margin: 0;
     position: absolute;
