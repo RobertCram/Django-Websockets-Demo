@@ -23,12 +23,14 @@ function clearGallery(){
     }    
 }
 
+function addJavascriptImage(){
+    src = picsumUrl();
+    desc = `Javascript Image #${imagesAdded + 1}`;
+    addImage(src, desc);
+    imagesAdded++;
+}
+
 function addImage(src, desc){
-    if (!src) {
-        src = picsumUrl();
-        desc = `Javascript Image #${imagesAdded + 1}`
-        imagesAdded++
-    }
     imgTag = createImgTag(src, "alt text")
     descTag = createDescTag(desc)
     div = createGalleryDivTag(imgTag, descTag);
