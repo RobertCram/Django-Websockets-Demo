@@ -10,10 +10,3 @@ gallerySocket.onmessage = function(e) {
 gallerySocket.onclose = function(e) {
     console.error('Gallery socket closed');
 };
-
-function generateImages(number_of_images){
-    if(confirm(`About to add ${number_of_images} images`)){
-        gallerySocket.send(JSON.stringify({'images': number_of_images, 'batchnumber': batchnumber+1}));
-        batchnumber++
-    }    
-}

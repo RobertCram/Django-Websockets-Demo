@@ -3,8 +3,8 @@
 """
 from django.urls import re_path
 
-from . import models
+from . import consumers
 
 websocket_urlpatterns = [
-    re_path(r'ws/gallery/$', models.GalleryConsumer.as_asgi()),
+    re_path(r'ws/gallery/$', consumers.GalleryConsumer.as_asgi()),
 ]

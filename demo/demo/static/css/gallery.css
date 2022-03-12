@@ -110,3 +110,22 @@ div.desc {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+form {
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: large;
+}
+
+form th {
+    text-align: left;
+    font-size: large;
+    height: 35px;
+    padding-right: 15px;
+}
+
+  
